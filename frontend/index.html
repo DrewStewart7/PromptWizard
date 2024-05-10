@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Wizard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="dark-mode-switch">
+            <label for="darkMode">Dark Mode</label>
+            <input type="checkbox" id="darkMode" />
+        </div>
+        <h1>Prompt Wizard</h1>
+        
+    </header>
+    <div id="mainDiv">
+        <main>
+            <section>
+                <h2>Enter Your Original Prompt</h2>
+                <form id="prompt-form">
+                    <textarea id="original-prompt" rows="4" cols="50"></textarea>
+                    <button type="submit" id="myButton">Enhance Prompt</button>
+                </form>
+                <div id="spinner" style="display: none;">
+                    <img src="loading.gif" alt="Loading..." />
+                </div>
+            </section>
+            <section>
+                <h2>Enhanced Prompt</h2>
+                <div id="enhanced-prompt"></div>
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        <p>© 2024 Prompt Wizard</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
