@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+body {
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    height: 10vh;
+    
+}
+
+#mainDiv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+main {
+    margin: 20px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#prompt-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    margin-bottom: 10px;
+    resize: none;
+}
+
+button {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 20%;
+    transition: transform 0.3s ease-in-out;
+    background-size: 800%;
+    animation: gradient 10s ease forwards;
+    animation-play-state: paused;
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.1); }
+    40% { transform: scale(0.9); }
+    60% { transform: scale(1.05); }
+    80% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+
+#enhanced-prompt {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.dark-mode-switch {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.dark-mode-switch label {
+    margin-right: 10px;
+}
+
+.dark-mode-switch input {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #c4c4c4;
+    outline: none;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.dark-mode-switch input:checked {
+    background: #6d6875;
+}
+
+.dark-mode-switch input:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+
+.dark-mode-switch input:checked:before {
+    left: 20px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #444;
+}
+
+body.dark-mode #enhanced-prompt {
+    background-color: #555;
+    border-color: #444;
+}
+
+body.dark-mode .dark-mode-switch input:checked {
+    background: #fff;
+}
+
+body.dark-mode .dark-mode-switch input:before {
+    background: #333;
+}
+
+#spinner img {
+    width: 105px;
+    height: 75px;
+}
